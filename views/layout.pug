@@ -14,11 +14,13 @@ html(lang='en')
     header
       nav.navbar.navbar-expand-sm.navbar-dark.p-3
         .container
+          img#image(src="/images/ccci.png", alt="", srcset="")
           a.navbar-brand(href='/')
-            span.spn Campus 
-            | Crusade For
-            span.spn  Christ 
-            | International
+            div
+              span.spn Campus 
+              | Crusade For
+              span.spn  Christ 
+              p International
           button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav')
             span.navbar-toggler-icon
           #navbarNav.collapse.navbar-collapse
@@ -32,8 +34,12 @@ html(lang='en')
     // Header End
     block content
     footer.d-flex.justify-content-center.pt-5
-      p &copy;  2022 
-        a#link(href='https://bithubph.herokuapp.com/' target='_blank')  Campus Crusade For Christ International
+      p &copy;  2022  
+    a#footerText(href='/')
+      span.spn  Campus 
+      | Crusade For
+      span.spn  Christ 
+      p International
     script(type='text/javascript', src='/js/jquery.js')
     script(type='text/javascript', src='/js/popper.min.js')
     script(type='text/javascript', src='/js/bootstrap.min.js')
