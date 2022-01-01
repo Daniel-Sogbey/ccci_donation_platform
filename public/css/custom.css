@@ -15,9 +15,20 @@ body{
 
 #image{
     margin: auto;
-    width: 25%;
+    width: 12%;
     height: auto;
+    padding-right: 10px;
 }
+
+@media screen and (max-width: 600px) {
+    #image{
+        margin: auto;
+        width: 25%;
+        height: auto;
+    }
+}
+    
+
 
 #footerText{
     text-align: center;
