@@ -1,0 +1,35 @@
+extends layout
+block content
+    main
+        .row.justify-content-center
+            .container3.text-white.p-5
+                .container4
+                    h3.text-center
+                        | Donate To
+                        span.spn  PUSH 
+                        | The Campus Ministry Forward
+                .container.pt-3
+                    form#form(name='myForm', action='/paystack/pay', method='POST', onSubmit="event.preventDefault();validate()")
+                        input#name(type='text', name='full_name', placeholder='Full Name', value =fullName)
+                        hr
+                        input#email(type='email', name='email', placeholder='Email', value =email)
+                        hr
+                        select(name='amount')
+                            option Select Amount
+                            option(value='500') 500
+                            option(value='1000') 1000
+                            option(value='2000') 2000
+                        .bttn.pt-2
+                            button(type='submit') DONATE
+    script. 
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let form = document.getElementById("form");
+
+        function validate() {
+            if(name == "" && email.value ==""){
+                alert("Name and Email fields are required")
+            }else{
+                form.submit();
+            }
+        }
