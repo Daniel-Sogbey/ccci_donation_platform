@@ -1,5 +1,5 @@
-require("./config/mongoose");
 require("dotenv").config();
+require("./config/mongoose");
 const path = require("path");
 const express = require("express");
 const request = require("request");

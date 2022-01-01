@@ -10,6 +10,9 @@ const options = {
 	useFindAndModify: true
 };
 
-mongoose.connect(url, options).then(() => {
-	console.log("database connected successfully");
-});
+mongoose
+	.connect(url, options)
+	.then(() => {
+		console.log("database connected successfully");
+	})
+	.catch(error => console.log("ERROR-----------------", error));
