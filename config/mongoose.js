@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const url = "mongodb://localhost:27017/OnlinePaymentDB";
+// const url = "mongodb://localhost:27017/OnlinePaymentDB";
+const url = process.env.MONGODB_REMOTE_URL;
 
 const options = {
 	useNewUrlParser: true,
@@ -10,5 +11,5 @@ const options = {
 };
 
 mongoose.connect(url, options).then(() => {
-	console.log("database connected successfully")
+	console.log("database connected successfully");
 });
